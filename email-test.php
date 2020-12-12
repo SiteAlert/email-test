@@ -24,20 +24,44 @@ if ( ! class_exists( 'SA_Email_Test' ) ) {
 	 */
 	class SA_Email_Test {
 
+		/**
+		 * Initializes our plugin
+		 *
+		 * @since 0.1.0
+		 */
 		public static function init() {
 			self::load_dependencies();
 			self::load_hooks();
 		}
 
+		/**
+		 * Loads all other plugin files
+		 *
+		 * @since 0.1.0
+		 */
 		public static function load_dependencies() {
 
 		}
 
+		/**
+		 * Adds in any plugin-wide hooks
+		 *
+		 * @since 0.1.0
+		 */
 		public static function load_hooks() {
+			add_action( 'admin_menu', array( __CLASS__, 'setup_admin_menu' ) );
+		}
 
+		/**
+		 * Sets up our page in the admin menu
+		 *
+		 * @since 0.1.0
+		 */
+		public static function setup_admin_menu() {
+			add_management_page( 'Email Test', 'Email Test', 'manage_options', 'email-test', '' );
 		}
 	}
 
-	add_action( 'plugins_loaded', array( 'SA_Email_Test', 'init' ) );
+	SA_Email_Test::init();
 }
 ?>
