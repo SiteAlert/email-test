@@ -62,7 +62,7 @@ if ( ! class_exists( 'SA_Email_Test' ) ) {
 			}
 
 			// Only perform our email test once the form is submitted.
-			if ( isset( $_POST['email-test'] ) ) {
+			if ( isset( $_POST['email-test'] ) && wp_verify_nonce( $_POST['email-test-nonce'], 'test-email' ) ) {
 				$success = true;
 				$error   = '';
 				try {
@@ -95,12 +95,20 @@ if ( ! class_exists( 'SA_Email_Test' ) ) {
 				<form method="POST" action="">
 					<label for="email-test">Enter an email address to send a test email to</label>
 					<input id="email-test" type="email" name="email-test">
+					<?php wp_nonce_field( 'test-email', 'email-test-nonce' ); ?>
 					<button type="submit" class="button button-primary">Send test email</button>
 				</form>
 			</div>
 			<?php
 		}
 
+		/**
+		 * Attempts to send an email from WordPress to supplied email address
+		 *
+		 * @param string $email_address The email address to send an email to.
+		 * @throws Exception If email fails, the exception will contain more details for why it failed.
+		 * @since 0.1.0
+		 */
 		public static function email_test( $email_address ) {
 			if ( ! is_email( $email_address ) ) {
 				throw new Exception( 'The email provided was not valid.' );
