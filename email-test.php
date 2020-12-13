@@ -58,7 +58,24 @@ if ( ! class_exists( 'SA_Email_Test' ) ) {
 		 * @since 0.1.0
 		 */
 		public static function setup_admin_menu() {
-			add_management_page( 'Email Test', 'Email Test', 'manage_options', 'email-test', '' );
+			add_management_page( 'Email Test', 'Email Test', 'manage_options', 'email-test', array( __CLASS__, 'generate_admin_page' ) );
+		}
+
+		public static function generate_admin_page() {
+			if ( ! current_user_can( 'manage_options' ) ) {
+				return;
+			}
+			?>
+			<div class="wrap">
+				<h2>Email Test</h2>
+				<div id="results"><?php echo $_POST['email-test']; ?></div>
+				<form method="POST" action="">
+					<label for="email-test">Enter an email address to send a test email to</label>
+					<input id="email-test" type="email" name="email-test">
+					<button type="submit" class="button button-primary">Send test email</button>
+				</form>
+			</div>
+			<?php
 		}
 	}
 
