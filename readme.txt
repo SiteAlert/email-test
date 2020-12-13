@@ -1,7 +1,7 @@
 === Email Test ===
 Contributors: fpcorso
 Tags: mail, email, test
-Requires at least: 5.3
+Requires at least: 5.4
 Tested up to: 5.6
 Stable tag: 0.1.0
 Requires PHP: 5.6
@@ -12,16 +12,14 @@ Test your site's email to make sure emails are being sent.
 
 == Description ==
 
-XXX
+Need to test to see if your site is sending emails correctly? Use this plugin!
+
+Once activated, a new **Email Test** page will appear in the "Tools" menu of your admin menu.
+
+On that page, you can enter in your email address to send a test email to it. If the email does not get sent, the plugin will attempt to catch the error from WordPress to provide to you.
 
 = Make Suggestions Or Contribute =
 Email Test [is on GitHub](https://github.com/SiteAlert/email-test)!
-
-== Frequently Asked Questions ==
-
-= XXX =
-
-XXX
 
 == Screenshots ==
 
@@ -33,8 +31,3 @@ XXX
 * Initial Release
 
 For the rest of the changelog, [review our CHANGELOG.MD](https://github.com/SiteAlert/email-test/blob/main/CHANGELOG.md)!
-
-== Upgrade Notice ==
-
-= 0.1.0 =
-XXX
