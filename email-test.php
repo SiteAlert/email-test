@@ -30,17 +30,7 @@ if ( ! class_exists( 'SA_Email_Test' ) ) {
 		 * @since 0.1.0
 		 */
 		public static function init() {
-			self::load_dependencies();
 			self::load_hooks();
-		}
-
-		/**
-		 * Loads all other plugin files
-		 *
-		 * @since 0.1.0
-		 */
-		public static function load_dependencies() {
-
 		}
 
 		/**
@@ -61,10 +51,17 @@ if ( ! class_exists( 'SA_Email_Test' ) ) {
 			add_management_page( 'Email Test', 'Email Test', 'manage_options', 'email-test', array( __CLASS__, 'generate_admin_page' ) );
 		}
 
+		/**
+		 * Generates our admin page
+		 *
+		 * @since 0.1.0
+		 */
 		public static function generate_admin_page() {
 			if ( ! current_user_can( 'manage_options' ) ) {
 				return;
 			}
+
+			// Only perform our email test once the form is submitted.
 			if ( isset( $_POST['email-test'] ) ) {
 				$success = true;
 				$error   = '';
@@ -81,10 +78,11 @@ if ( ! class_exists( 'SA_Email_Test' ) ) {
 				<h2>Email Test</h2>
 				<div id="results">
 					<?php
+					// Display results of the test.
 					if ( isset( $_POST['email-test'] ) ) {
 						if ( true === $success ) {
 							?>
-							<p>Success</p>
+							<p>Your email was marked as sent by WordPress. Now, go check your email to see if the email was received.</p>
 							<?php
 						} else {
 							?>
