@@ -32,7 +32,7 @@ XXX
 = 0.1.0 (XXX, XX, XXXX) =
 * Initial Release
 
-For the rest of the changelog, [review our CHANGELOG.MD](XXX)!
+For the rest of the changelog, [review our CHANGELOG.MD](https://github.com/SiteAlert/email-test/blob/main/CHANGELOG.md)!
 
 == Upgrade Notice ==
 
