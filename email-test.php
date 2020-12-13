@@ -109,19 +109,19 @@ if ( ! class_exists( 'SA_Email_Test' ) ) {
 			}
 		
 			// Prepare our transient for error catching.
-			set_transient( 'wphc_wp_mail_failed_reason', '', 60 );
+			set_transient( 'sa_wp_mail_failed_reason', '', 60 );
 		
 			// Prepare our email.
 			$to = sanitize_email( $email_address );
 			$subj = 'Email Test';
 		
 			// Add our function to catch any errors, send the email, and then immediately remove our function.
-			add_action( 'wp_mail_failed', 'wphc_catch_email_errors' );
+			add_action( 'wp_mail_failed', array( __CLASS__, 'catch_email_errors' ) );
 			$success = wp_mail($to, $subj, 'This is a test email from your site!');
-			remove_action( 'wp_mail_failed', 'wphc_catch_email_errors' );
+			remove_action( 'wp_mail_failed', array( __CLASS__, 'catch_email_errors' ) );
 		
 			// See if our error reason was updated due to wp_mail_failed error.
-			$reason = get_transient( 'wphc_wp_mail_failed_reason' );
+			$reason = get_transient( 'sa_wp_mail_failed_reason' );
 			if ( ! empty( $reason ) ) {
 				throw new Exception( "The email was not sent. WordPress provided this reason: $reason" );
 			}
@@ -130,6 +130,20 @@ if ( ! class_exists( 'SA_Email_Test' ) ) {
 			if ( false === $success ) {
 				throw new Exception( 'The email was not sent. WordPress provided no reason for the error.' );
 			}
+		}
+
+		/**
+		 * Attempts to catch errors from our test email
+		 *
+		 * @param WP_Error $wp_error
+		 * @since 0.1.0
+		 */
+		public static function catch_email_errors( $wp_error ) {
+			if ( ! is_wp_error( $wp_error ) ) {
+				return;
+			}
+			$error = $wp_error->get_error_message('wp_mail_failed');
+			set_transient( 'sa_wp_mail_failed_reason', $error, 60 );
 		}
 	}
 
