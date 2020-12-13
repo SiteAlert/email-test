@@ -83,11 +83,11 @@ if ( ! class_exists( 'SA_Email_Test' ) ) {
 				if ( isset( $_POST['email-test'] ) ) {
 					?>
 					<section class="email-test-results notice <?php echo true === $success ? 'notice-success' : 'notice-error'; ?>">
-						<h2>Your Email Test Results</h2>
+						<h2><?php esc_html_e( 'Your Email Test Results', 'email-test' ); ?></h2>
 						<?php
 						if ( true === $success ) {
 							?>
-							<p>Your email was marked as sent by WordPress. Now, go check your email to see if the email was received.</p>
+							<p><?php esc_html_e( 'Your email was marked as sent by WordPress. Now, go check your email to see if the email was received.', 'email-test' ); ?></p>
 							<?php
 						} else {
 							?>
@@ -100,14 +100,14 @@ if ( ! class_exists( 'SA_Email_Test' ) ) {
 				}
 				?>
 				<section class="email-test-form">
-					<h2>Run an Email Test</h2>
-					<p>Not sure if your site is sending email correctly? Use this form to try to send an email to yourself.</p>
+					<h2><?php esc_html_e( 'Run an Email Test', 'email-test' ); ?></h2>
+					<p><?php esc_html_e( 'Not sure if your site is sending email correctly? Use this form to try to send an email to yourself.', 'email-test' ); ?></p>
 					<form method="POST" action="">
-						<label for="email-test">What email address should we send the test email to?</label>
+						<label for="email-test"><?php esc_html_e( 'What email address should we send the test email to?', 'email-test' ); ?></label>
 						<input id="email-test" type="email" name="email-test">
 						<?php wp_nonce_field( 'test-email', 'email-test-nonce' ); ?>
 						<p class="submit">
-							<button type="submit" class="button button-primary">Send test email</button>
+							<button type="submit" class="button button-primary"><?php esc_html_e( 'Send test email', 'email-test' ); ?></button>
 						</p>
 					</form>
 				</section>
@@ -124,7 +124,7 @@ if ( ! class_exists( 'SA_Email_Test' ) ) {
 		 */
 		public static function email_test( $email_address ) {
 			if ( ! is_email( $email_address ) ) {
-				throw new Exception( 'The email provided was not valid.' );
+				throw new Exception( __( 'The email provided was not valid.', 'email-test' ) );
 			}
 		
 			// Prepare our transient for error catching.
@@ -132,22 +132,23 @@ if ( ! class_exists( 'SA_Email_Test' ) ) {
 		
 			// Prepare our email.
 			$to = sanitize_email( $email_address );
-			$subj = 'Email Test';
+			$subj = __( 'Your test email!', 'email-test' );
 		
 			// Add our function to catch any errors, send the email, and then immediately remove our function.
 			add_action( 'wp_mail_failed', array( __CLASS__, 'catch_email_errors' ) );
-			$success = wp_mail($to, $subj, 'This is a test email from your site!');
+			$success = wp_mail( $to, $subj, __( 'This is a test email from your site!', 'email-test' ) );
 			remove_action( 'wp_mail_failed', array( __CLASS__, 'catch_email_errors' ) );
 		
 			// See if our error reason was updated due to wp_mail_failed error.
 			$reason = get_transient( 'sa_wp_mail_failed_reason' );
 			if ( ! empty( $reason ) ) {
-				throw new Exception( "The email was not sent. WordPress provided this reason: $reason" );
+				/* translators: 1. Reason provided by WordPress. */
+				throw new Exception( sprintf( __( 'The email was not sent. WordPress provided this reason: %s', 'email-test' ), $reason ) );
 			}
 		
 			// If not, determine success based on bool returned from wp_mail.
 			if ( false === $success ) {
-				throw new Exception( 'The email was not sent. WordPress provided no reason for the error.' );
+				throw new Exception( __( 'The email was not sent. WordPress provided no reason for the error.', 'email-test' ) );
 			}
 		}
 
