@@ -27,7 +27,7 @@ Email Test [is on GitHub](https://github.com/SiteAlert/email-test)!
 
 == Changelog ==
 
-= 0.1.0 (XXX, XX, XXXX) =
+= 0.1.0 (December 14, 2020) =
 * Initial Release
 
 For the rest of the changelog, [review our CHANGELOG.MD](https://github.com/SiteAlert/email-test/blob/main/CHANGELOG.md)!
