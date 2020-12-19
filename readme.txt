@@ -23,7 +23,7 @@ Email Test [is on GitHub](https://github.com/SiteAlert/email-test)!
 
 == Screenshots ==
 
-1. Admin Page
+1. Test page
 
 == Changelog ==
 
