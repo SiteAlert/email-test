@@ -18,8 +18,11 @@ Once activated, a new **Email Test** page will appear in the "Tools" menu of you
 
 On that page, you can enter in your email address to send a test email to it. If the email does not get sent, the plugin will attempt to catch the error from WordPress to provide to you.
 
-= Make Suggestions Or Contribute =
+### Make Suggestions Or Contribute
+
 Email Test [is on GitHub](https://github.com/SiteAlert/email-test)!
+
+
 
 == Screenshots ==
 
