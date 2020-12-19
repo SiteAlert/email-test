@@ -4,5 +4,6 @@
 *.jpg binary
 
 # Items to ignore when downloading a zip
-.gitattributes export-ignore
 /.* export-ignore
+.gitattributes export-ignore
+.distignore export-ignore
