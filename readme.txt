@@ -1,6 +1,6 @@
-=== Email Test ===
+=== Email Test - Check if your site's emails are being delivered ===
 Contributors: sitealert, fpcorso
-Tags: mail, email, test
+Tags: mail, email, test, check
 Requires at least: 5.4
 Tested up to: 5.6
 Stable tag: 1.0.0
@@ -8,7 +8,7 @@ Requires PHP: 5.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Test your site's email to make sure emails are being sent.
+Test your site's email to make sure emails are being sent and delivered.
 
 == Description ==
 
