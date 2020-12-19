@@ -22,6 +22,9 @@ On that page, you can enter in your email address to send a test email to it. If
 
 Email Test [is on GitHub](https://github.com/SiteAlert/email-test)!
 
+### Need More?
+
+Would you like to have your site's email tested automatically and regularly? All SiteAlert's plans include our email deliverability feature! [Learn more about SiteAlert](https://sitealert.io/).
 
 
 == Screenshots ==
