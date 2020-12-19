@@ -16,7 +16,7 @@ Community made feature requests, patches, localisations, bug reports and contrib
 
 When contributing please ensure you follow the guidelines below so that we can keep on top of things.
 
-Please Note: GitHub is not intended for support based questions. For those, please use the [support forums](https://wordpress.org/support/plugin/XXXX).
+Please Note: GitHub is not intended for support based questions. For those, please use the [support forums](https://wordpress.org/plugins/email-test/).
 
 ### Creating Issues
 
@@ -48,4 +48,4 @@ This project is licensed under the GPLv3 License - see the [LICENSE file](https:
 
 ## Support
 
-This is a developer's portal for Email Test and should _not_ be used for support. Please create a support ticket [here](https://wordpress.org/support/plugin/XXXX).
+This is a developer's portal for Email Test and should _not_ be used for support. Please create a support ticket [in our support forums](https://wordpress.org/plugins/email-test/).

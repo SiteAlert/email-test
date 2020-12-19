@@ -3,12 +3,11 @@
  * Plugin Name: Email Test
  * Description: Test your site's email to make sure emails are being sent.
  * Version: 0.1.0
- * Author: Frank Corso
- * Author URI: https://frankcorso.me
- * Plugin URI: https://frankcorso.me
+ * Author: SiteAlert
+ * Author URI: https://sitealert.io
  * Text Domain: email-test
  *
- * @author Frank Corso
+ * @author SiteAlert
  */
 
 // Exits if accessed directly.

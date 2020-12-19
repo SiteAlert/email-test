@@ -1,5 +1,5 @@
 === Email Test ===
-Contributors: fpcorso
+Contributors: sitealert, fpcorso
 Tags: mail, email, test
 Requires at least: 5.4
 Tested up to: 5.6
