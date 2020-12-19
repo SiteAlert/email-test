@@ -1,9 +1,9 @@
 === Email Test ===
-Contributors: fpcorso
+Contributors: sitealert, fpcorso
 Tags: mail, email, test
 Requires at least: 5.4
 Tested up to: 5.6
-Stable tag: 0.1.0
+Stable tag: 1.0.0
 Requires PHP: 5.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -23,9 +23,14 @@ Email Test [is on GitHub](https://github.com/SiteAlert/email-test)!
 
 == Screenshots ==
 
-1. Admin Page
+1. Test page
 
 == Changelog ==
+
+= 1.0.0 (December 19, 2020) =
+* Minor text changes
+* Add screenshot
+* Add icon
 
 = 0.1.0 (December 14, 2020) =
 * Initial Release

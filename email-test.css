@@ -1,7 +1,11 @@
 /**************
 Email Test Results
 **************/
-
+.email-test-results .review-cta {
+	text-align: center;
+	font-size: 12px;
+	font-style: italic;
+}
 
 
 /**************
