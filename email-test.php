@@ -94,6 +94,7 @@ if ( ! class_exists( 'SA_Email_Test' ) ) {
 							<?php
 						}
 						?>
+						<p class='review-cta'><?php echo sprintf( esc_html__( 'Is this plugin helping? Please consider %1$sleaving a review%2$s!' ), '<a href="https://wordpress.org/support/plugin/email-test/reviews/" target="_blank" rel="noreferrer noopener">', '</a>' ); ?></p>
 					</section>
 					<?php
 				}
