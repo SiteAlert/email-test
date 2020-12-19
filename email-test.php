@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Email Test
  * Description: Test your site's email to make sure emails are being sent.
- * Version: 0.1.0
+ * Version: 1.0.0
  * Author: SiteAlert
  * Author URI: https://sitealert.io
  * Text Domain: email-test
