@@ -1,4 +1,4 @@
-=== Email Test - Check if your site's emails are being delivered ===
+=== Email Test - Check if your emails are being delivered ===
 Contributors: sitealert, fpcorso
 Tags: mail, email, test, check
 Requires at least: 5.4
