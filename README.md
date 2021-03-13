@@ -32,6 +32,10 @@ Please Note: GitHub is not intended for support based questions. For those, plea
 * We are trying to ensure that every function is documented well and follows the standards set by phpDoc going forward
 * Finally, please use tabs and not spaces. The tab indent size should be 4 for all SiteAlert code
 
+## Deployment
+
+This WordPress plugin is automatically deployed when a new GitHub release is created from master.
+
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see [the releases in this repository](https://github.com/SiteAlert/email-test/releases).

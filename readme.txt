@@ -1,9 +1,9 @@
 === Email Test - Check if your emails are being delivered ===
 Contributors: sitealert, fpcorso
 Tags: mail, email, test, check
-Requires at least: 5.4
-Tested up to: 5.6
-Stable tag: 1.0.0
+Requires at least: 5.5
+Tested up to: 5.7
+Stable tag: 1.0.1
 Requires PHP: 5.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -32,6 +32,10 @@ Would you like to have your site's email tested automatically and regularly? All
 1. Test page
 
 == Changelog ==
+
+= 1.0.1 (March 14, 2021) =
+* Bump tested to up to 5.7
+* Minor design tweaks
 
 = 1.0.0 (December 19, 2020) =
 * Minor text changes

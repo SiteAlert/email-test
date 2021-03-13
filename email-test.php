@@ -110,6 +110,7 @@ if ( ! class_exists( 'SA_Email_Test' ) ) {
 							<button type="submit" class="button button-primary"><?php esc_html_e( 'Send test email', 'email-test' ); ?></button>
 						</p>
 					</form>
+					<p>Want automated email testing? <a href="https://sitealert.io/?utm_campaign=email-test-plugin&utm_medium=plugin&utm_source=email-test-page">Check out SiteAlert</a>!</p>
 				</section>
 			</div>
 			<?php

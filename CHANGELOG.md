@@ -1,5 +1,10 @@
 # Email Test's Changelog
 
+## 1.0.1 (March 14, 2021)
+
+* Bump tested to up to 5.7
+* Minor design tweaks
+
 ## 1.0.0 (December 19, 2020)
 
 * Minor text changes
