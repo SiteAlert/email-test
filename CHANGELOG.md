@@ -1,5 +1,9 @@
 # Email Test's Changelog
 
+## 1.0.3 (January 15, 2022)
+
+* Bump tested to up to 5.8
+
 ## 1.0.2 (March 14, 2021)
 
 * Bump tested to up to 5.7
